@@ -1,0 +1,26 @@
+.certificate {
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  padding-bottom: 140px;
+  @media (max-width: 768px) {
+    padding-bottom: 30px;
+  }
+  &__title {
+    margin-bottom: 40px;
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__container {
+    
+  }
+
+  &__spin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 200px;
+  }  
+}

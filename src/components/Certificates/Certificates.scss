@@ -1,0 +1,133 @@
+.certificates {
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -40px 0 0 -45px;
+    @media (max-width: 768px) {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    max-width: 266px;
+    min-height: 310px;
+    margin: 40px 0 0 45px;
+    border-radius: 3px;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    background-color: #fff;
+    overflow: hidden;
+
+    @media (max-width: 1380px) {
+      max-width: 303px;
+    }
+
+    @media (max-width: 1024px) {
+      max-width: 327px;
+    }
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+      margin: 0;
+    }
+
+    &_img {
+      height: 175px;
+
+      img {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &_body {
+      position: relative;
+      background-color: #fff;
+      padding: 50px 15px 15px;
+    }
+
+    &_title {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      color: rgb(var(--color_black));
+      margin-bottom: 5px;
+    }
+
+    &_bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__cost {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #666666;
+  }
+
+  &__btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #faf3f5;
+    transition: all 0.25s linear;
+
+    &.disabled {
+      opacity: 0.3;
+      cursor: default;
+      &:hover,
+      &:active {
+        background-color: #faf3f5;
+        svg {
+          stroke: #98092d;
+        }
+      }
+    }
+
+    &:hover {
+      background-color: #98092d;
+      svg {
+        stroke: #fff;
+      }
+    }
+
+    &:active {
+      background-color: #8e092d;
+    }
+
+    &_icon {
+      width: 30px;
+      height: 30px;
+      stroke: #98092d;
+    }
+  }
+
+  &__zap {
+    position: absolute;
+    top: 20px;
+    right: 17px;
+    cursor: pointer;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.certificate-more {
+  .certificates__item {
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+}

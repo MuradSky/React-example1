@@ -1,0 +1,157 @@
+.program-consent {
+    position: relative;
+
+    width: 100%;
+    max-width: 950px;
+    border-radius: 3px;
+    padding: 40px;
+
+    @media (max-width: 768px) {
+        max-width: 290px;
+        padding: 20px;
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #FAF3F5;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__body {
+        display: flex;
+        padding: 30px 0;
+        border-bottom: 1px solid #FAF3F5;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            padding: 20px 0 0;
+        }
+
+        .program-consent__item {
+            font-size: 16px;
+            line-height: 20px;
+
+            @media (max-width: 768px) {
+                font-size: 12px;
+                line-height: 160%;
+            }
+        }
+    }
+
+    &__item {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: rgba(35, 31, 32, 0.5);
+        width: 100%;
+
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+        }
+
+        &_hide {
+            display: none;
+            @media (max-width: 768px) {
+                display: block;
+            }
+        }
+
+        span {
+            font-size: 12px;
+            line-height: 160%;
+            display: block;
+        }
+
+        &:nth-child(1) {
+            max-width: 217px;
+            padding-right: 20px;
+        }
+
+        &:nth-child(2) {
+            max-width: 407px;
+            padding-right: 20px;
+        }
+
+        &:nth-child(3) {
+            max-width: 255px;
+            padding-right: 20px;
+        }
+
+        &_period {
+            color: #98092D;
+
+        }
+
+        &_name {
+            margin-bottom: 10px;
+            color: #231F20;
+        }
+    
+        &_id,
+        &_person {
+            font-size: 12px;
+            line-height: 160%;
+
+        }
+
+        &_id {
+            color: #98092D;
+            margin-right: 15px;
+        }
+        &_person {
+            color: #231F20;
+
+        }
+
+        &_sku {
+            font-size: 10px;
+            line-height: 140%;
+            color: #231F20;
+        }
+
+        &_row {
+            display: flex;
+            align-items: center;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
+
+    &__form.form  {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding-top: 20px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-top: 0;
+        }
+        .form__checkbox {
+            margin: 0;
+            margin-right: 45px;
+
+            @media (max-width: 768px) {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+        .btn {
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,132 @@
+.footer {
+  &__top {
+    background-color: rgb(var(--color_red));
+    padding: 24px 0 54px;
+
+    @media (max-width: 1380px) {
+      padding: 25px 0 50px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+
+      a {
+        font-size: 10px;
+      }
+    }
+  }
+
+  &__text {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 160%;
+    color: rgb(var(--color_red));
+  }
+
+  .logo img {
+    max-width: 144px;
+
+    @media (max-width: 1380px) {
+      max-width: 108px;
+    }
+
+    @media (max-width: 768px) {
+      max-width: 72px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .menu {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    @media (max-width: 768px) {
+      padding: 0;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__item {
+      margin: 0 20px;
+      @media (max-width: 768px) {
+        margin: 0;
+      }
+      a {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        color: rgb(var(--color_white));
+        text-decoration: none;
+
+        @media (max-width: 768px) {
+          display: block;
+          padding: 10px 0;
+          font-size: 12px;
+          line-height: 160%;
+        }
+      }
+    }
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @media (max-width: 1024px) {
+      margin-top: 20px;
+      align-items: flex-start;
+    }
+    &__phone {
+      a {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: uppercase;
+        color: rgb(var(--color_white));
+        text-decoration: none;
+
+        @media (max-width: 768px) {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 160%;
+        }
+      }
+    }
+
+    &__descr {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      color: rgb(var(--color_white));
+      margin-top: 8px;
+
+      @media (max-width: 768px) {
+        font-size: 12px;
+        line-height: 160%;
+      }
+    }
+  }
+}

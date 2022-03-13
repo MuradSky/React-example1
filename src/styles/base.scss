@@ -1,0 +1,81 @@
+@import "./reset.scss";
+@import "./vars.scss";
+@import "./fonts.scss";
+@import "./components/form.scss";
+@import "./components/title.scss";
+@import "./components/pagination.scss";
+// BASE
+
+* {
+  font-family: "Montserrat" !important;
+  box-sizing: border-box;
+}
+
+.router {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  @media (max-width: 1380px) {
+    max-width: 1000px;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 700px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 375px;
+  }
+
+  @media (max-width: 400px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s linear;
+}
+
+a {
+  text-decoration: none;
+}
+
+[data-reach-dialog-overlay] {
+  z-index: 1000;
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.rc-tooltip {
+  max-width: 201px;
+
+  .rc-tooltip-inner {
+    text-align: center;
+  }
+}
+
+.Toastify__toast-container--top-center {
+  width: 100% !important;
+  max-width: 500px;
+}

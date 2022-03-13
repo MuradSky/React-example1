@@ -1,0 +1,23 @@
+.title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 49px;
+    color: rgb(var(--color_black));
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+.title-18 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #84273A;
+
+    &_green {
+        color: #6CB825;
+    }
+}

@@ -1,0 +1,361 @@
+.personal-area {
+  &__inner {
+    display: flex;
+    padding: 40px;
+    background: #ffffff;
+    border: 2px solid rgba(132, 39, 58, 0.05);
+    border-radius: 3px;
+    position: relative;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+
+    @media (max-width: 768px) {
+      padding: 27px 20px 20px;
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__passport {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    padding-right: 25px;
+    a {
+      color: #84273a;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__item {
+    width: 100%;
+    &_first {
+      max-width: 515px;
+
+      @media (max-width: 1024px) {
+        max-width: 100%;
+      }
+    }
+    &_last {
+      padding-left: 42px;
+      max-width: 678px;
+
+      @media (max-width: 1024px) {
+        max-width: 100%;
+        padding-left: 0;
+        border-top: 1px solid rgba(152, 9, 45, 0.05);
+        max-height: 0;
+        transition: all 0.25s linear;
+        opacity: 0;
+        overflow: hidden;
+      }
+
+      &.show {
+        @media (max-width: 1024px) {
+          max-height: 50em;
+          opacity: 1;
+          overflow: visible;
+          margin-top: 20px;
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+
+  &__title {
+    min-height: 22px;
+    transition: all 0.25s linear;
+    &.hide {
+      opacity: 0;
+    }
+
+    &.show {
+      opacity: 1;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(152, 9, 45, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 768px) {
+      width: 36px;
+      height: 36px;
+      top: 20px;
+      right: 20px;
+    }
+    &.active {
+      img {
+        transform: rotate(0);
+      }
+    }
+
+    img {
+      width: 26px;
+      height: 26px;
+      transition: all 0.25s linear;
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__body {
+    max-height: 0;
+    transition: all 0.25s linear;
+    opacity: 0;
+    overflow: hidden;
+    &_first {
+      border-right: 2px solid rgba(152, 9, 45, 0.05);
+
+      @media (max-width: 1024px) {
+        border: 0;
+      }
+    }
+    &.show {
+      max-height: 50em;
+      opacity: 1;
+      overflow: visible;
+      margin-top: 10px;
+      padding-top: 10px;
+    }
+  }
+
+  &__d-flex {
+    display: flex;
+    @media (max-width: 1350px) {
+      justify-content: space-between;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__lock {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+
+    span {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      color: #98092d;
+      margin-bottom: -4px;
+    }
+
+    img {
+      margin-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    &_mobile {
+      display: none;
+      margin-bottom: 15px;
+      @media (max-width: 768px) {
+        display: block;
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-left: 10px;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      justify-content: center;
+      padding: 16px 0;
+    }
+  }
+
+  &__text {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 160%;
+    margin-bottom: 20px;
+    color: #231f20;
+  }
+
+  &__info {
+    display: flex;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 160%;
+    color: #eb5757;
+    margin-bottom: 20px;
+    img {
+      width: 20px;
+      height: 20px;
+      margin-right: 15px;
+    }
+  }
+
+  &__call {
+    margin-top: 20px;
+
+    a {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      color: #231f20;
+
+      border-bottom: 1px dashed #231f20;
+    }
+  }
+}
+
+.personal-data {
+  padding-top: 15px;
+  @media (max-width: 1350px) {
+    width: 40%;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-top: -25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &:first-child {
+    margin-right: 40px;
+    max-width: 260px;
+    @media (max-width: 1350px) {
+      margin-right: 0;
+    }
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+
+  &__item {
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-bottom: 25px;
+      &_last {
+        width: 50%;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__key {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #c16b81;
+    margin-bottom: 15px;
+    @media (max-width: 768px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__val {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #231f20;
+    margin-bottom: 15px;
+    @media (max-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.addresses {
+  padding-top: 10px;
+  max-height: 205px;
+
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #e0b5c0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #98092d;
+    border-radius: 20px;
+    border: 1px solid #f5e6ea;
+  }
+  li {
+    display: flex;
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__id {
+    background: #f5e6ea;
+    border-radius: 3px;
+    padding: 8px 16px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #231f20;
+    margin-right: 30px;
+    white-space: nowrap;
+    align-self: flex-start;
+    width: 100%;
+    max-width: 140px;
+    @media (max-width: 768px) {
+      padding: 8px 10px;
+      font-size: 12px;
+      line-height: 15px;
+      margin-right: 15px;
+      max-width: 100px;
+    }
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #231f20;
+    margin-bottom: 8px;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  &__address {
+    font-size: 16px;
+    line-height: 20px;
+    color: #231f20;
+    @media (max-width: 768px) {
+      font-size: 12px;
+      line-height: 160%;
+    }
+  }
+}

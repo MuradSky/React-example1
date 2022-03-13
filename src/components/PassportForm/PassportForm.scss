@@ -1,0 +1,119 @@
+.passport-form {
+    &__inner {
+        width: 100%;
+        max-width: 620px;
+        margin: 0 auto;
+        padding: 50px;
+        background-color: #ffffff;
+        border-radius: 5px;
+
+        @media (max-width: 768px) {
+            padding: 15px;
+        }
+    }
+
+    &__text {
+        font-size: 12px;
+        line-height: 160%;
+        text-align: center;
+        color: #231F20;
+        margin-bottom: 25px;
+        span {
+            font-weight: 600;
+            color: #98092D;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 10px;
+        }
+    }
+
+    .form__d-flex {
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+        @media (max-width: 768px) {
+           align-items: flex-start;
+           margin-bottom: 0;
+        }
+        p {
+            margin-right: 25px;
+
+            @media (max-width: 768px) {
+                margin-bottom: 10px;
+            }
+        }
+
+        .form__radio {
+            margin-bottom: 0;
+            margin-right: 20px;
+
+            @media (max-width: 768px) {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__switch {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px 0;
+        @media (max-width: 768px) {
+            padding: 10px 0;
+            flex-direction: column;
+            margin-top: -10px;
+        }
+        .btn {
+            @media (max-width: 768px) {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    &__btn {
+        width: 50%;
+        padding: 12px 0;
+        background-color: #FAF3F5;
+        color: #C16B81;
+        &.active {
+            background-color: #98092D;
+            color: #fff;
+        }
+        &:first-child {
+            border-radius: 3px 0px 0px 3px;
+        }
+
+        &:last-child {
+            border-radius: 0px 3px 3px 0px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+
+        .form__label {
+            width: 48%;
+        }
+    }
+
+    &__submit {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+
+        &.valid {
+            span {
+                opacity: 0;
+            }
+        }
+    }
+
+    &__dropzone {
+        margin-bottom: 30px;
+    }
+}

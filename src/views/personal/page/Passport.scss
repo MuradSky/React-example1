@@ -1,0 +1,10 @@
+.passport {
+    background-color: #f9f9f9;
+    padding-bottom: 30px;
+    &__title {
+        margin-bottom: 70px;
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+        }
+    }
+}

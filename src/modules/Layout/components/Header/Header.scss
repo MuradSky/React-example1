@@ -1,0 +1,88 @@
+.header {
+  background-color: rgb(var(--color_red));
+  padding: 32px 0;
+  @media (max-width: 1380px) {
+    padding: 25px 0;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__user-wrap {
+    @media (max-width: 768px) {
+      margin-left: auto;
+      margin-right: 20px;
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  .logo img {
+    max-width: 108px;
+
+    @media (max-width: 768px) {
+      max-width: 72px;
+    }
+  }
+
+  .menu {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    @media (max-width: 768px) {
+      display: none;
+    }
+    &__item {
+      margin: 0 20px;
+
+      a {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        color: rgb(var(--color_white));
+        text-decoration: none;
+      }
+    }
+  }
+
+  .lk {
+    display: flex;
+    align-items: center;
+
+    &__profile {
+      margin-left: 8px;
+
+      @media (max-width: 1024px) {
+        display: none;
+      }
+
+      &_name {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        color: rgb(var(--color_white));
+      }
+
+      &_points {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: rgb(var(--color_white));
+        opacity: 0.8;
+        margin-top: 3px;
+      }
+    }
+  }
+}
